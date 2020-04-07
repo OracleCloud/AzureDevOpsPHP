@@ -9,7 +9,7 @@
 //Import PHPMailer classes into the global namespace
 include '../src/PHPMailer.php';
 include '../src/SMTP.php';
-include '../src/Exception.php';
+
 
 
 //Create a new PHPMailer instance
@@ -25,7 +25,7 @@ $mail->isSMTP();
 $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
 //Set the hostname of the mail server
-$mail->Host = 'smtp.gmail.com';
+$mail->Host = '#{SMTP_HOST}#';
 // use
 // $mail->Host = gethostbyname('smtp.gmail.com');
 // if your network does not support SMTP over IPv6
@@ -40,19 +40,19 @@ $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->SMTPAuth = true;
 
 //Username to use for SMTP authentication - use full email address for gmail
-$mail->Username = 'username@gmail.com';
+$mail->Username = '#{SMTP_USERNAME}#';
 
 //Password to use for SMTP authentication
-$mail->Password = 'yourpassword';
+$mail->Password = '#{SMTP_PASSWORD}#';
 
 //Set who the message is to be sent from
-$mail->setFrom('from@example.com', 'First Last');
+$mail->setFrom('oraclepeoplesoft@dbtutor.com', 'First Last');
 
 //Set an alternative reply-to address
-$mail->addReplyTo('replyto@example.com', 'First Last');
+$mail->addReplyTo('oraclepeoplesoft@dbtutor.com', 'First Last');
 
 //Set who the message is to be sent to
-$mail->addAddress('whoto@example.com', 'John Doe');
+$mail->addAddress('nayanmailbox@gmail.com', 'John Doe');
 
 //Set the subject line
 $mail->Subject = 'PHPMailer GMail SMTP test';
