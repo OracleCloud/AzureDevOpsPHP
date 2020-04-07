@@ -46,13 +46,13 @@ $mail->Username = '#{SMTP_USERNAME}#';
 $mail->Password = '#{SMTP_PASSWORD}#';
 
 //Set who the message is to be sent from
-$mail->setFrom('oraclepeoplesoft@dbtutor.com', 'First Last');
+$mail->setFrom('#{SMTP_SETFORMEMAIL}#', 'First Last');
 
 //Set an alternative reply-to address
-$mail->addReplyTo('oraclepeoplesoft@dbtutor.com', 'First Last');
+$mail->addReplyTo('#{SMTP_SETFORMEMAIL}#', 'First Last');
 
 //Set who the message is to be sent to
-$mail->addAddress('nayanmailbox@gmail.com', 'John Doe');
+$mail->addAddress('#{SMTP_TOADDRESSEMAIL}#', 'John Doe');
 
 //Set the subject line
 $mail->Subject = 'PHPMailer GMail SMTP test';
