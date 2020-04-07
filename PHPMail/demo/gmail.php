@@ -7,10 +7,10 @@
  */
 
 //Import PHPMailer classes into the global namespace
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
+include '../src/PHPMailer.php';
+include '../src/SMTP.php';
+include '../src/Exception.php';
 
-require '../vendor/autoload.php';
 
 //Create a new PHPMailer instance
 $mail = new PHPMailer;
